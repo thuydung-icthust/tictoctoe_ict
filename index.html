@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tic Tac Toe</title>
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy|Permanent+Marker|Indie+Flower&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Da&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="menu" id = "content">
+        <div class="header">
+            
+            <div style="display: flex; flex-direction: row; justify-content: center;">
+                <h3 class="c1">Tic </h3>
+                <h3 class="c2"> Tac </h3>
+                <h3 class="c3"> Toe</h3>
+            </div>
+        </div>
+        
+        <div id="menu-starter">
+            <ul>
+                <li>
+                    <h3 class="option1" onclick="start();">Start</h3>
+                    
+                </li>
+                <li>
+                    <h3 class="option2">How to Play</h3>
+                    
+                </li>
+                <li>
+                    <h3 class="option3">About</h3>
+                    
+                </li>
+            </ul>
+        </div>
+
+        
+        <div id="playing" style="color: white;">
+            Turn: Player
+        </div>
+        <div class="main" id="table3">
+            <div class="btn-group" id ="btn-group">
+                <button><i class="fas fa-pause fa-2x" style="cursor: pointer;" onclick="pause()"></i></a></button>
+                <button><i class="fas fa-backward fa-2x" onclick="backtoMenu()" style="cursor: pointer;"></i></button>
+                <button><i class="fas fa-redo-alt fa-2x" id="playbut" onclick="startGame()"
+                        style="cursor: pointer;"></i></button>
+            </div>
+            <div class="table_main">
+                <table id="_table3">
+                    <tr>
+                        <td class="cell" id="0"></td>
+                        <td class="cell" id="1"></td>
+                        <td class="cell" id="2"></td>
+                    </tr>
+                    <tr>
+                        <td class="cell" id="3"></td>
+                        <td class="cell" id="4"></td>
+                        <td class="cell" id="5"></td>
+                    </tr>
+                    <tr>
+                        <td class="cell" id="6"></td>
+                        <td class="cell" id="7"></td>
+                        <td class="cell" id="8"></td>
+                    </tr>
+                </table>
+            </div>
+        
+        <div id="myNav" class="overlay" >
+
+  <!-- Button to close the overlay navigation -->
+
+  <!-- Overlay content -->
+  <div class="overlay-content">
+    <a href="#" id="winner-player"></a>
+    <a href="#" onclick="restart()">RePlay</a>
+    <a href="#" onclick="backtoMenu()">Menu</a>
+  </div>
+</div>
+<div id="pausegame" class="overlay">
+
+    <!-- Button to close the overlay navigation -->
+  
+    <!-- Overlay content -->
+    
+  </div>
+
+    </div>
+    
+    
+    <script src="https://kit.fontawesome.com/8e500f9321.js" crossorigin="anonymous"></script>
+    <script src="reduce.js"></script>
+</body>
+</html>

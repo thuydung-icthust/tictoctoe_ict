@@ -1,0 +1,302 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+td{
+    border: 2px solid #333;
+    height: 100px;
+    width: 100px;
+    font-size: 70px;
+    text-align: center;
+    font-family: 'Baloo Da', cursive;
+    cursor: pointer;
+}
+body {
+    background-image: url("background1.jpg") !important;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+
+table{
+    left: 0% !important;
+    border-collapse: collapse;
+     background-color: white !important;
+    position: relative;
+    top: 100px;
+   
+}
+table tr:first-child td{
+    border-top: 0;
+}
+table tr:last-child td{
+    border-bottom: 0;
+}
+table tr td:first-child{
+    border-left: 0;
+}
+table tr td:last-child{
+    border-right: 0;
+}
+#menu-starter{
+    display: block;
+    position: relative;
+    z-index: -20;
+}
+.menu{
+    
+    width: 100%;
+    z-index: 0;
+    position: relative;
+}
+.main{
+    display: none;
+}
+.header{
+    text-align: center;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 30px;
+}
+.line{
+    width: 500px;
+    margin-left: 700px;
+    height: 15px;
+    background-color: white;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+ul{
+    text-align: center;
+    margin-top: 200px;
+}
+.option1,.option2,.option3{
+    text-decoration: none;
+    color: white;
+    font-size: 5vw;
+    font-family: 'Permanent Marker', cursive;
+    height: auto;
+    position: relative;
+    cursor: pointer;
+}
+.c1,.c2, .c3{
+    font-size: 8vw;
+    margin-right: 1.5vw;
+   
+}
+.c1:hover, .c2:hover, .c3:hover{
+    transform: translateY(-5px);
+}
+.option1:hover, .option2:hover, .option3:hover{
+    transform: translateX(10px);
+    text-decoration: solid;
+    color: rgb(207, 40, 40) !important;
+    text-decoration-color: antiquewhite;
+}
+.line1, .line2, .line3{
+    left: 50%;
+    right: 50%;
+    
+    margin-top: -11px;
+    height: 5px;
+    width: 0px;
+    background-color: white;
+}
+.line1{
+    margin-left: 41.5%;
+    
+}
+.line2{
+    margin-left: 35%;
+}
+.line3{
+    margin-left: 41.5%;
+}
+.option1:hover ~ .line1{
+    width: 120px;
+    transition-property: width;
+    transition-duration: 0.5s;
+}
+.option2:hover ~ .line2{
+    width: 290px;
+    transition-property: width;
+    transition-duration: 0.5s;
+}
+.option3:hover ~ .line3{
+    width: 135px;
+    transition-property: width;
+    transition-duration: 0.5s;
+}
+#menu-starter{
+    display: block;
+    position: relative;
+    font-size: 6vw !important;
+}
+.option-but{
+    display: none;
+}
+#playbut{
+    
+    height: auto;
+    position: relative;
+    
+}
+#playing{
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Indie Flower', cursive;
+    display: none;
+}
+
+#pausegame .overlay-content .pointer{
+    margin-bottom: 40px;
+    color: white !important;
+    cursor: pointer;
+    
+}
+
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+  
+  /* Position the content inside the overlay */
+  .overlay-content {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+  }
+  
+  /* The navigation links inside the overlay */
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  /* Position the close button (top right corner) */
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  
+  /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+  @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
+
+
+  .endgame {
+    display: none;
+    width: 200px;
+    top: 120px;
+    background-color: rgba(205,133,63, 0.8);
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-size: 2em;
+}
+
+ /* CHANGE from hereee -----------*/
+  .header {
+      position: relative;
+      margin-top: 50px;
+      text-align: center;
+      color: white;
+      
+  }
+
+  .option:hover {
+      color: red !important;
+  }
+
+  .button {
+      display: inline !important;
+      
+      color: red;
+  }
+
+  .table_main {
+    
+      display: flex; justify-content: center;
+      margin-bottom: 50px;
+      
+  }
+  #_table3 {
+    margin-bottom: 50px !important;
+  }
+  .btn-group {
+      float: center !important;
+  }
+  .btn-group button {
+    font-size : 2vw !important;
+  
+  left: 50%; /* Green background */
+  border: 1px solid green; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+}
+div.btn-group {
+    margin: 0 auto; 
+    text-align: center !important;
+    
+    display: inline-block;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Add a background color on hover */
+
+
+
+.btn-group button {background-color: black;}
+.btn-group button:hover { 
+    background-image: linear-gradient(to right, #5C258D 0%, #4389A2 51%, #5C258D 100%)
+}
